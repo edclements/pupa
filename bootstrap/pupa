@@ -111,9 +111,9 @@ function install_puppetrepo {
   if test ! -f '/etc/apt/sources.list.d/puppet5.list'; then
     log "Fetching Puppet ${platform_ver} release package for ${distr^} ${rel^}"
     if debugging; then
-      curl -L -O "https://apt.puppetlabs.com/puppet${platform_ver}-release-${rel}.deb"
+      curl -L -O -k "https://apt.puppetlabs.com/puppet${platform_ver}-release-${rel}.deb"
     else
-      curl -s -L -O "https://apt.puppetlabs.com/puppet${platform_ver}-release-${rel}.deb"
+      curl -s -L -O -k "https://apt.puppetlabs.com/puppet${platform_ver}-release-${rel}.deb"
     fi
     log "Installing Puppetlabs APT sources entries for ${distr^} ${rel^}"
     if debugging; then
