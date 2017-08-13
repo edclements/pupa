@@ -6,6 +6,7 @@ class packages {
     'vim',
     'tmux',
     'vifm',
+    'tree',
   ]
 
   package {
